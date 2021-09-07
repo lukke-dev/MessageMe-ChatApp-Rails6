@@ -4,8 +4,7 @@
 // that code so it'll be compiled.
 
 import "@doabit/semantic-ui-sass";
-import "semantic-ui";
-import "@doabit/semantic-ui-sass/src/scss/semantic-ui.scss";
+
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
@@ -14,4 +13,6 @@ import "channels";
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
-$(".ui.dropdown").dropdown();
+$(document).on("turbolinks:load", () => {
+  $(".ui.dropdown").dropdown();
+});

@@ -1,0 +1,6 @@
+fora a configuração padrao q está no site do semantic ui, add este codigo
+javascript ao application.js:
+
+$(document).on("turbolinks:load", () => {
+  $(".ui.dropdown").dropdown();
+});
