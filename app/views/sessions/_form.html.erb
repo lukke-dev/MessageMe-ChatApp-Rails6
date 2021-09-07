@@ -1,0 +1,17 @@
+<%= form_with model: @session, class: "ui form" do |form| %>
+  <div class="field">
+    <%= form.label :username, "Usuário"%>
+    <div class="ui left icon input">
+      <%= form.text_field :username, placeholder: "Usuário" %>
+      <i class="user icon"></i>
+    </div>
+  </div>
+  <div class="field">
+    <%= form.label :password, "Senha"%>
+    <div class="ui left icon input">
+      <%= form.password_field :password %>
+      <i class="lock icon"></i>
+    </div>
+  </div>
+  <%= form.submit "Login", class: "ui violet submit button"%>
+<% end %>
