@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def require_user
     unless logged_in?
-      flash[:error] = 'Você precisa estar logado para esta ação'
+      flash[:error] = 'Você precisa estar logado para acessar esta página.'
       redirect_to login_path
     end
   end
