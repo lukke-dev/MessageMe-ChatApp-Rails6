@@ -42,7 +42,7 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'ws://coffe-room.herokuapp.com/cable'
+  # config.action_cable.url = 'ws://coffe-room.herokuapp.com/cable'
   # config.action_cable.allowed_request_origins = ['  /', %r{https://coffe-room.herokuapp.com/*}]
   # config.action_cable.allowed_request_origins = ['https://coffe-room.herokuapp.com']
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
@@ -56,7 +56,9 @@ Rails.application.configure do
   config.log_tags = [:request_id]
 
   # Use a different cache store in production.
-  config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0') }
+  config.cache_store = :redis_cache_store,
+                       { url: ENV.fetch('REDIS_URL',
+                                        'redis://redistogo:c802c3c41a89c5090a190c3a87e1ab64@sole.redistogo.com:9728/') }
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
