@@ -17,3 +17,10 @@ const scroll_bottom = function () {
     $("#messages").scrollTop($("#messages")[0].scrollHeight);
   }
 };
+const submit_message = function () {
+  $("#message_body").on("keydown", function (e) {
+    if (e.keyCode == 13) {
+      e.target.value = "";
+    }
+  });
+};

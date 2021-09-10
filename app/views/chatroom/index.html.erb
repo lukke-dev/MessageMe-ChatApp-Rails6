@@ -14,8 +14,8 @@
         <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |form|%>
           <div class=" field">
             <div class="ui fluid icon input">
-              <%= form.text_field :body, placeholder: "Digite uma mensagem..."%>
-              <%= form.button '<i class="bordered inverted violet edit icon"></i>'.html_safe %>
+              <%= form.text_field :body, placeholder: "Digite uma mensagem..." %>
+              <%= form.submit  %>
             </div>
           </div>
         <% end %>
