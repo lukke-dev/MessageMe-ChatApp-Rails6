@@ -6,7 +6,7 @@
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
       <div class="content">
-        <div class="ui large feed">
+        <div class="ui large feed" id="message-container">
           <%= render @messages %>
         </div>
       </div>
@@ -15,7 +15,7 @@
           <div class=" field">
             <div class="ui fluid icon input">
               <%= form.text_field :body, placeholder: "Digite uma mensagem..."%>
-              <%= form.button '<i type ="submit" class="bordered inverted violet icon reply"></i>'.html_safe %>
+              <%= form.button '<i class="bordered inverted violet edit icon"></i>'.html_safe %>
             </div>
           </div>
         <% end %>

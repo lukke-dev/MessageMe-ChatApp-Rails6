@@ -3,6 +3,6 @@ class ChatroomController < ApplicationController
 
   def index
     @messages = Message.all
-    @message = ''
+    @message = Message.new
   end
 end

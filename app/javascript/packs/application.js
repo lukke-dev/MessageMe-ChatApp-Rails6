@@ -4,12 +4,11 @@
 // that code so it'll be compiled.
 
 import "@doabit/semantic-ui-sass";
-
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
-import "channels";
-
+require("channels");
+require("jquery");
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
