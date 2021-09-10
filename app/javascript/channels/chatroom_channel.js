@@ -14,13 +14,11 @@ consumer.subscriptions.create("ChatroomChannel", {
 });
 const scroll_bottom = function () {
   if ($("#messages").length > 0) {
+    $("#message_body").on("keyup", function (e) {
+      if (e.keyCode == 13) {
+        e.target.value = "";
+      }
+    });
     $("#messages").scrollTop($("#messages")[0].scrollHeight);
   }
-};
-const submit_message = function () {
-  $("#message_body").on("keydown", function (e) {
-    if (e.keyCode == 13) {
-      e.target.value = "";
-    }
-  });
 };
